@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Terminal+Dosis);
+
 		.nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
 		.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
 		#home .ui-icon { background:  url(glyphish-icons/53-house.png) 100% 50% no-repeat; background-size: 24px 22px; }
@@ -8,3 +10,48 @@
 		#coffee .ui-icon { background:  url(glyphish-icons/100-coffee.png) 50% 50% no-repeat;  background-size: 20px 24px; }
 		#skull .ui-icon { background:  url(glyphish-icons/21-skull.png) 50% 50% no-repeat;  background-size: 22px 24px; }
 		
+.calendar-item {
+	font-family:'Terminal Dosis', Arial, sans-serif;
+	width:90%;
+	height:60px;
+	background-color:#083242;
+	color:white;
+	border-radius:10px;
+	padding:5px 10px;
+	margin:10px;
+}
+
+.more-game-info {
+	font-size:13px;
+	width:300px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.home-team-logo {
+	barder-radius:20px;
+	background-color:#083242;
+	width:50px;
+	height:50px;
+	padding:5px;
+	float:left;
+}
+
+.away-team-logo {
+	barder-radius:20px;
+	background-color:#083242;
+	width:50px;
+	height:50px;
+	padding:5px;
+	float:right;
+	position:relative;
+	top:-45px;
+}
+
+.game-date {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+	font-size:14px;
+	font-family:'Terminal Dosis', Arial, sans-serif;
+}
