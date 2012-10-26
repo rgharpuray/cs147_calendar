@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<?p<!DOCTYPE html> 
 <html>
 
 <head>
@@ -42,43 +42,30 @@
 <div data-role="page" id="filter">
 <!-- /header -->
 <div data-role="header">
-    <a href="subscriptions.php" data-icon="star">Subscriptions</a>
-    <h1>GameTime</h1>
+    <a href="index.php" data-icon="star">Done</a>
+    <h1>Subscriptions</h1>
 </div>
 
 	<div data-role="content">	
 
 	<div class="calendar-item">
 		<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
-		<p class="game-date">Oct. 25, 8:30 p.m. EST </p>
-		<img class="away-team-logo" src = "http://sezyou.files.wordpress.com/2011/01/buccaneers_logo-217194536_std.gif"/>
+		<p class="game-date">Minnesota Vikings </p>
+		
 	</div>
 
 	<div class="calendar-item">
 		<img class="home-team-logo" src = "http://seahawks.sportspressnw.com/files/2010/01/seahawks_logo-bevel_bg_16001.jpg"/>
-		<p class="game-date">Nov. 4, 1:00 p.m. EST</br>
+		<p class="game-date">Seattle Seahawks</br>
 		</p>
-		<img class="away-team-logo" src = "http://footballfanstuff.com/images/San_Francisco_49ers.gif"/>
 	</div>
 
 	<div class="calendar-item">
 		<img class="home-team-logo" src = "http://images.pictureshunt.com/pics/c/cincinnati_bengals_logo-9085.gif"/>
-		<p class="game-date">Nov. 4, 8:20 p.m. EST </p>
-		<img class="away-team-logo" src = "http://content.sportslogos.net/logos/7/162/full/857.gif"/>
+		<p class="game-date">Cincinatti Bengals</p>
 	</div>
 	
-	<div class="calendar-item">
-		<img class="home-team-logo" src = "http://cdn-wp2.gofishn.com/wp-content/uploads/2012/07/Miami-Dolphins-Logo.gif"/>
-		<p class="game-date">Nov. 4, 8:20 p.m. EST </p>
-		<img class="away-team-logo" src = "http://dubsism.files.wordpress.com/2010/12/st-louis-rams-logo.gif"/>
-	</div>
-	
-	<div class="calendar-item">
-		<img class="home-team-logo" src = "http://content.sportslogos.net/logos/7/165/full/406.gif"/>
-		<p class="game-date">Nov. 4, 8:20 p.m. EST </p>
-		<img class="away-team-logo" src = "http://images2.fanpop.com/images/photos/3900000/Logo-jacksonville-jaguars-3974893-545-434.gif"/>
-	</div>
-	
+
 	
 	
 	</div><!-- /content -->
