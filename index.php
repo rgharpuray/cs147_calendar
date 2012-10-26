@@ -17,47 +17,64 @@
 	<script src="jquery.mobile-1.2.0.js"></script>
 
 </head> 
+<script>
+	$(function() {
+		$(".calendar-item").click(function() {
+			if($(this).css("background-color") == 'rgb(8, 50, 66)')
+			{
+				$(this).css("background-color", "green");
+				$(this).css("height", "200px");
+				$(this).append('<p class="more-game-info">More info about the game! </p>');
+			}
+			else
+			{
+				$(this).css("background-color", 'rgb(8, 50, 66)');
+				$(this).css("height", "60px");
+				$(".more-game-info").remove();
+			}
+		});
+	})
+</script>
+
 <body> 
 
 <div data-role="page" id="filter">
 <!-- /header -->
 
 	<div data-role="content">	
-<canvas id="myCanvas" width="768" height="1004"></canvas>
 
-<script>
+	<div class="calendar-item">
+		<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
+		<p class="game-date">Oct. 25, 8:30 p.m. EST </p>
+		<img class="away-team-logo" src = "http://sezyou.files.wordpress.com/2011/01/buccaneers_logo-217194536_std.gif"/>
+	</div>
 
-var canvas = document.getElementById('myCanvas');
-var context = canvas.getContext('2d');
-var x = canvas.width /2;
-var radius=100;
+	<div class="calendar-item">
+		<img class="home-team-logo" src = "http://seahawks.sportspressnw.com/files/2010/01/seahawks_logo-bevel_bg_16001.jpg"/>
+		<p class="game-date">Nov. 4, 1:00 p.m. EST</br>
+		</p>
+		<img class="away-team-logo" src = "http://footballfanstuff.com/images/San_Francisco_49ers.gif"/>
+	</div>
 
-context.fillStyle = "rgb(0,0,0)";
-context.fillRect(x-5,0,10,1004);
-context.clearRect(x-50,20,100,25);
-context.strokeStyle = "rg(0,0,0)";
-context.strokeRect(x-50,20,100,25);
-context.clearRect(x-200,70,400,100);
-context.strokeRect(x-200,70,400,100);
-context.clearRect(x-200,205,400,100);
-context.strokeRect(x-200,205,400,100);
-context.clearRect(x-200,340,400,100);
-context.strokeRect(x-200,340,400,100);
-context.clearRect(x-50,475,100,25);
-context.strokeRect(x-50,475,100,25);
-context.clearRect(x-200,535,400,100);
-context.strokeRect(x-200,535,400,100);
-context.clearRect(x-200,670,400,100);
-context.strokeRect(x-200,670,400,100);
-context.font = '18pt Helvetica';
-context.fillText('Nov. 15',x-40,41);
-context.fillText('Nov. 16',x-40,496);
-
-
-
-</script>
-
-
+	<div class="calendar-item">
+		<img class="home-team-logo" src = "http://images.pictureshunt.com/pics/c/cincinnati_bengals_logo-9085.gif"/>
+		<p class="game-date">Nov. 4, 8:20 p.m. EST </p>
+		<img class="away-team-logo" src = "http://content.sportslogos.net/logos/7/162/full/857.gif"/>
+	</div>
+	
+	<div class="calendar-item">
+		<img class="home-team-logo" src = "http://cdn-wp2.gofishn.com/wp-content/uploads/2012/07/Miami-Dolphins-Logo.gif"/>
+		<p class="game-date">Nov. 4, 8:20 p.m. EST </p>
+		<img class="away-team-logo" src = "http://dubsism.files.wordpress.com/2010/12/st-louis-rams-logo.gif"/>
+	</div>
+	
+	<div class="calendar-item">
+		<img class="home-team-logo" src = "http://content.sportslogos.net/logos/7/165/full/406.gif"/>
+		<p class="game-date">Nov. 4, 8:20 p.m. EST </p>
+		<img class="away-team-logo" src = "http://images2.fanpop.com/images/photos/3900000/Logo-jacksonville-jaguars-3974893-545-434.gif"/>
+	</div>
+	
+	
 	
 	</div><!-- /content -->
 
