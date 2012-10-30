@@ -25,7 +25,11 @@
 		$(".nba-teams").hide();
 		$("#nfl").css("opacity", 1.0);
 		$(".team-item-subscribed").click(function() {
-			//alert('ajax will replace this to update membership');
+			e.stopPropagation();
+			return false;
+			
+			$(this).css('background-color', 'black');
+			alert('here');
 		});
 	});
 	
@@ -169,10 +173,6 @@
 			<img class="home-team-logo" src = "http://www.harvardclub.com/Images/Library/red-sox-logo.jpg"/>
 			<p class="game-date">Boston Red Sox</p>
 		</div>
-	</div>
-	
-
-	
 	
 	</div><!-- /content -->
 
