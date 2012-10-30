@@ -113,9 +113,24 @@
 			<p class="game-date">Golden State Warriors</p>
 		</div>
 	</div>
-	
+	  
 	<div class="mlb-teams">
+		<div class="calendar-item">
+			<img class="home-team-logo" src = "http://upload.wikimedia.org/wikipedia/en/thumb/5/5e/SF_GiantsLogo_83_93.png/120px-SF_GiantsLogo_83_93.png"/>
+			<p class="game-date">San Fransisco Giants </p>
 		
+		</div>
+
+		<div class="calendar-item">
+			<img class="home-team-logo" src = "http://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Baltimore_Orioles_Script.svg/220px-Baltimore_Orioles_Script.svg.png"/>
+			<p class="game-date">Baltimore Orioles</br>
+			</p>
+		</div>
+
+		<div class="calendar-item">
+			<img class="home-team-logo" src = "http://www.harvardclub.com/Images/Library/red-sox-logo.jpg"/>
+			<p class="game-date">Boston Red Sox</p>
+		</div>
 	</div>
 	
 
