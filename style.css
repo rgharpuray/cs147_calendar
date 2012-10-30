@@ -54,6 +54,8 @@
     width: 200px;
 	font-size:14px;
 	font-family:'Terminal Dosis', Arial, sans-serif;
+	top:-35px;
+	float:left;
 }
 
 .league-selectors {
