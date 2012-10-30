@@ -70,3 +70,25 @@
 	height:60px;
 	opacity:0.7;
 }
+
+.team-item-subscribed {
+	font-family:'Terminal Dosis', Arial, sans-serif;
+	width:90%;
+	height:60px;
+	background-color:#083242;
+	color:white;
+	border-radius:10px;
+	padding:5px 10px;
+	margin:10px;
+}
+
+.team-item-unsubscribed {
+	font-family:'Terminal Dosis', Arial, sans-serif;
+	width:90%;
+	height:60px;
+	background-color:#9C2A00;
+	color:white;
+	border-radius:10px;
+	padding:5px 10px;
+	margin:10px;
+}
