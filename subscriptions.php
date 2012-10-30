@@ -73,11 +73,9 @@
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
 		<ul>
-			<li><a href="#" id="nfl" data-icon="custom">NFL</a></li>
-			<li><a href="#" id="home" data-icon="custom">NHL</a></li>
-			<li><a href="#" id="key" data-icon="custom">NBA</a></li>
-			<li><a href="#" id="beer" data-icon="custom" >MLB</a></li>
-			<li><a href="#" id="skull" data-icon="custom" class="ui-btn-active">MLS</a></li>
+			<li><a href="subscriptions.php" id="nfl" data-icon="custom">Subscriptions</a></li>
+			<li><a href="index.php" id="home" data-icon="custom">Calendar</a></li>
+			<li><a href="#" id="key" data-icon="custom">Maps</a></li>
 		</ul>
 		</div>
 	</div>
