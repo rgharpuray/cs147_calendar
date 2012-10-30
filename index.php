@@ -41,7 +41,6 @@
 <div data-role="page" id="filter">
 <!-- /header -->
 <div data-role="header">
-    <a href="subscriptions.php" data-icon="star">Subscriptions</a>
     <h1>GameTime</h1>
 </div>
 
