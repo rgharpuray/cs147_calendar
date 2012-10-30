@@ -25,20 +25,8 @@
 		$(".nba-teams").hide();
 		$("#nfl").css("opacity", 1.0);
 		$(".team-item-subscribed").click(function() {
-			if($(this).css("background-color") == 'rgb(8, 50, 66)')
-			{
-				$(this).css("background-color", "green");
-				$(this).css("height", "200px");
-				$(this).append('<p class="more-game-info">More info about the game! </p>');
-			}
-			else
-			{
-				$(this).css("background-color", 'rgb(8, 50, 66)');
-				$(this).css("height", "60px");
-				$(".more-game-info").remove();
-			}
+			//alert('ajax will replace this to update membership');
 		});
-		
 	});
 	
 	function toggleNBA() {
@@ -70,6 +58,14 @@
 		$(".mlb-teams").hide();
 		$(".nba-teams").hide();
 	}
+	
+	function moreDetail(moreDetail)
+	{
+		alert(moreDetail.parentNode.parentNode.className);
+		var div = moreDetail.parentNode.parentNode;
+		div.style.height = '100px';
+	}
+	
 </script>
 
 <body> 
@@ -91,33 +87,42 @@
 
 	<div class="nfl-teams">
 		<div class="team-item-subscribed">
+			<button data-role="button" data-inline="true" onclick="moreDetail(this);">More detail</button>
 			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
 			<p class="game-date">Minnesota Vikings </p>
 		</div>
 
 		<div class="team-item-subscribed">
+			<button data-role="button" data-inline="true" onclick="moreDetail(this);">More detail</button>
+			
 			<img class="home-team-logo" src = "http://seahawks.sportspressnw.com/files/2010/01/seahawks_logo-bevel_bg_16001.jpg"/>
 			<p class="game-date">Seattle Seahawks</br>
 			</p>
 		</div>
 
 		<div class="team-item-subscribed">
+			<button data-role="button" data-inline="true" onclick="moreDetail(this);">More detail</button>
+			
 			<img class="home-team-logo" src = "http://images.pictureshunt.com/pics/c/cincinnati_bengals_logo-9085.gif"/>
 			<p class="game-date">Cincinatti Bengals</p>
 		</div>
 		
 		<div class="team-item-unsubscribed">
+			<button data-role="button" data-inline="true" onclick="moreDetail(this);">More detail</button>
 			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
 			<p class="game-date">Minnesota Vikings </p>
 		</div>
 
 		<div class="team-item-unsubscribed">
+			<button data-role="button" data-inline="true" onclick="moreDetail(this);">More detail</button>
+			
 			<img class="home-team-logo" src = "http://seahawks.sportspressnw.com/files/2010/01/seahawks_logo-bevel_bg_16001.jpg"/>
 			<p class="game-date">Seattle Seahawks</br>
 			</p>
 		</div>
 
 		<div class="team-item-unsubscribed">
+			<button data-role="button" data-inline="true" onclick="moreDetail(this);">More detail</button>
 			<img class="home-team-logo" src = "http://images.pictureshunt.com/pics/c/cincinnati_bengals_logo-9085.gif"/>
 			<p class="game-date">Cincinatti Bengals</p>
 		</div>
@@ -125,18 +130,20 @@
 	
 	<div class="nba-teams">
 		<div class="team-item-subscribed">
+			<button data-role="button" data-inline="true" onclick="moreDetail(this);">More detail</button>
 			<img class="home-team-logo" src = "http://www.goodlogo.com/images/logos/chicago_bulls_logo_3120.gif"/>
 			<p class="game-date">Chicago Bulls </p>
-		
 		</div>
 
 		<div class="team-item-subscribed">
+			<button data-role="button" data-inline="true" onclick="moreDetail(this);">More detail</button>
 			<img class="home-team-logo" src = "http://content.sportslogos.net/logos/6/219/full/852.gif"/>
 			<p class="game-date">Washington Wizards</br>
 			</p>
 		</div>
 
 		<div class="team-item-subscribed">
+			<button data-role="button" data-inline="true" onclick="moreDetail(this);">More detail</button>
 			<img class="home-team-logo" src = "http://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Golden_State_Warriors.svg/200px-Golden_State_Warriors.svg.png"/>
 			<p class="game-date">Golden State Warriors</p>
 		</div>
@@ -144,18 +151,20 @@
 	  
 	<div class="mlb-teams">
 		<div class="team-item-subscribed">
+			<button data-role="button" data-inline="true" onclick="moreDetail(this);">More detail</button>
 			<img class="home-team-logo" src = "http://upload.wikimedia.org/wikipedia/en/thumb/5/5e/SF_GiantsLogo_83_93.png/120px-SF_GiantsLogo_83_93.png"/>
 			<p class="game-date">San Fransisco Giants </p>
-		
 		</div>
 
 		<div class="team-item-subscribed">
+			<button data-role="button" data-inline="true" onclick="moreDetail(this);">More detail</button>
 			<img class="home-team-logo" src = "http://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Baltimore_Orioles_Script.svg/220px-Baltimore_Orioles_Script.svg.png"/>
 			<p class="game-date">Baltimore Orioles</br>
 			</p>
 		</div>
 
 		<div class="team-item-subscribed">
+			<button data-role="button" data-inline="true" onclick="moreDetail(this);">More detail</button>
 			<img class="home-team-logo" src = "http://www.harvardclub.com/Images/Library/red-sox-logo.jpg"/>
 			<p class="game-date">Boston Red Sox</p>
 		</div>
