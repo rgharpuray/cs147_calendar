@@ -20,6 +20,7 @@
     var toggle = 0;
     $(function () {
         $(".calendar-item").click(function () {
+			alert("here");
             if ($(this).css("background-color") == 'rgb(8, 50, 66)' && toggle==0) {
                 $(this).css("background-color", "green");
                 $(this).css("height", "200px");
