@@ -42,7 +42,6 @@
 <div data-role="page" id="filter">
 <!-- /header -->
 <div data-role="header">
-    <a href="index.php" data-icon="star">Done</a>
     <h1>Subscriptions</h1>
 </div>
 
@@ -71,7 +70,7 @@
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
-		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 		<ul>
 			<li><a href="subscriptions.php" id="nfl" data-icon="custom">Subscriptions</a></li>
 			<li><a href="index.php" id="home" data-icon="custom">Calendar</a></li>
