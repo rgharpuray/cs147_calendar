@@ -42,8 +42,8 @@
 	
 	function toggleNBA() {
 		$("#nba").css("opacity", 1.0);
-		$("#mlb").css("opacity", 0.6);
-		$("#nfl").css("opacity", 0.6);
+		$("#mlb").css("opacity", 0.3);
+		$("#nfl").css("opacity", 0.3);
 		
 		$(".nfl-teams").hide();
 		$(".mlb-teams").hide();
@@ -52,8 +52,8 @@
 	
 	function toggleMLB() {
 		$("#mlb").css("opacity", 1.0);
-		$("#nba").css("opacity", 0.6);
-		$("#nfl").css("opacity", 0.6);
+		$("#nba").css("opacity", 0.3);
+		$("#nfl").css("opacity", 0.3);
 
 		$(".nfl-teams").hide();
 		$(".mlb-teams").show();
@@ -62,8 +62,8 @@
 	
 	function toggleNFL() {
 		$("#nfl").css("opacity", 1.0);
-		$("#nba").css("opacity", 0.6);
-		$("#mlb").css("opacity", 0.6);
+		$("#nba").css("opacity", 0.3);
+		$("#mlb").css("opacity", 0.3);
 		
 		$(".nfl-teams").show();
 		$(".mlb-teams").hide();
