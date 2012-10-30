@@ -41,18 +41,30 @@
 	});
 	
 	function toggleNBA() {
+		$("#nba").css("opacity", 1.0);
+		$("#mlb").css("opacity", 0.6);
+		$("#nfl").css("opacity", 0.6);
+		
 		$(".nfl-teams").hide();
 		$(".mlb-teams").hide();
 		$(".nba-teams").show();
 	}
 	
 	function toggleMLB() {
+		$("#mlb").css("opacity", 1.0);
+		$("#nba").css("opacity", 0.6);
+		$("#nfl").css("opacity", 0.6);
+
 		$(".nfl-teams").hide();
 		$(".mlb-teams").show();
 		$(".nba-teams").hide();
 	}
 	
 	function toggleNFL() {
+		$("#nfl").css("opacity", 1.0);
+		$("#nba").css("opacity", 0.6);
+		$("#mlb").css("opacity", 0.6);
+		
 		$(".nfl-teams").show();
 		$(".mlb-teams").hide();
 		$(".nba-teams").hide();
