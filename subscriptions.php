@@ -42,7 +42,6 @@
 <div data-role="page" id="filter">
 <!-- /header -->
 <div data-role="header">
-    <a href="index.php" data-icon="star">Done</a>
     <h1>Subscriptions</h1>
 </div>
 
