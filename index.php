@@ -16,7 +16,6 @@
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
 
-</head> 
 <script>
 	$(function() {
 		$(".calendar-item").click(function() {
