@@ -17,22 +17,33 @@
 	<script src="jquery.mobile-1.2.0.js"></script>
 
 <script>
-	$(function() {
-		$(".calendar-item").click(function() {
-			if($(this).css("background-color") == 'rgb(8, 50, 66)')
-			{
-				$(this).css("background-color", "green");
-				$(this).css("height", "200px");
-				$(this).append('<p class="more-game-info">More info about the game! </p>');
-			}
-			else
-			{
-				$(this).css("background-color", 'rgb(8, 50, 66)');
-				$(this).css("height", "60px");
-				$(".more-game-info").remove();
-			}
-		});
-	})
+    var toggle = 0;
+    $(function () {
+        $(".calendar-item").click(function () {
+            if ($(this).css("background-color") == 'rgb(8, 50, 66)' && toggle==0) {
+                $(this).css("background-color", "green");
+                $(this).css("height", "200px");
+                $(this).append('<p class="more-game-info">More info about the game! </p>')
+                toggle = 1;
+            }
+            else if ($(this).css("background-color") == 'rgb(8, 50, 66)' && toggle==1)
+            {
+                $(".calendar-item").css("background-color", 'rgb(8, 50, 66)');
+                $(".calendar-item").css("height", "60px");
+                $(".more-game-info").remove();
+                $(this).css("background-color", "green");
+                $(this).css("height", "200px");
+                $(this).append('<p class="more-game-info">More info about the game! </p>')
+            }
+            else
+            {
+                $(this).css("background-color", 'rgb(8, 50, 66)');
+                $(this).css("height", "60px");
+                $(".more-game-info").remove();
+                toggle = 0;
+            }
+            });
+     })
 </script>
 
 <body> 
