@@ -178,9 +178,9 @@
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 		<ul>
-			<li><a href="subscriptions.php" id="nfl" data-icon="custom">Subscriptions</a></li>
-			<li><a href="index.php" id="home" data-icon="custom">Calendar</a></li>
-			<li><a href="#" id="key" data-icon="custom">Maps</a></li>
+			<li><a href="subscriptions.php" id="rss" data-icon="custom">Subscriptions</a></li>
+			<li><a href="index.php" id="calendar" data-icon="custom">Calendar</a></li>
+			<li><a href="#" id="map" data-icon="custom">Maps</a></li>
 		</ul>
 		</div>
 	</div>
