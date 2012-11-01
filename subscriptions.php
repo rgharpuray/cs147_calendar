@@ -143,7 +143,7 @@ include 'helpers.php';
 		?>
 		<div class="team-item-subscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
-			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
+			<img class="home-team-logo" src = "images/<?php echo $team['logourl']; ?>"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
 		</div>
 		<?php
@@ -155,7 +155,7 @@ include 'helpers.php';
 		?>
 		<div class="team-item-unsubscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
-			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
+			<img class="home-team-logo" src = "images/<?php echo $team['logourl']; ?>"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
 		</div>
 		<?php
@@ -171,7 +171,7 @@ include 'helpers.php';
 		?>
 		<div class="team-item-subscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
-			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
+			<img class="home-team-logo" src = "images/<?php echo $team['logourl']; ?>"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
 		</div>
 		<?php
@@ -183,7 +183,7 @@ include 'helpers.php';
 		?>
 		<div class="team-item-unsubscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
-			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
+			<img class="home-team-logo" src = "images/<?php echo $team['logourl']; ?>"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
 		</div>
 		<?php
@@ -199,7 +199,7 @@ include 'helpers.php';
 		?>
 		<div class="team-item-subscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
-			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
+			<img class="home-team-logo" src = "images/<?php echo $team['logourl']; ?>"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
 		</div>
 		<?php
@@ -211,7 +211,7 @@ include 'helpers.php';
 		?>
 		<div class="team-item-unsubscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
-			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
+			<img class="home-team-logo" src = "images/<?php echo $team['logourl']; ?>"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
 		</div>
 		<?php
