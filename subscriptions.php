@@ -30,12 +30,51 @@ include 'helpers.php';
 		$(".mlb-teams").hide();
 		$(".nba-teams").hide();
 		$("#nfl").css("opacity", 1.0);
-		$(".team-item-subscribed").click(function() {
-			e.stopPropagation();
-			return false;
+		$(".team-item-subscribed").click(function() {			
+			var team_id = $(this).attr('id');
+			var box = $(this);
+			var dataString = "team_id=" + team_id;
+			$.ajax({
+				type: "POST",
+				url: "subscribe_to_team.php",
+				data: dataString,
+				cache: false,
+				success: function(data){
+					if(data == "subscribed")
+					{
+						box.removeClass('team-item-unsubscribed').addClass('team-item-subscribed');
+					}
+					else
+					{
+						box.removeClass('team-item-subscribed').addClass('team-item-unsubscribed');
+					}				
+				}
+			});
 			
-			$(this).css('background-color', 'black');
-			alert('here');
+			return false;
+		});
+		$(".team-item-unsubscribed").click(function() {
+			var team_id = $(this).attr('id');
+			var box = $(this);
+			var dataString = "team_id=" + team_id;
+			$.ajax({
+				type: "POST",
+				url: "subscribe_to_team.php",
+				data: dataString,
+				cache: false,
+				success: function(data){
+					if(data == "subscribed")
+					{
+						box.removeClass('team-item-unsubscribed').addClass('team-item-subscribed');
+					}
+					else
+					{
+						box.removeClass('team-item-subscribed').addClass('team-item-unsubscribed');
+					}
+				}
+			});
+			
+			return false;
 		});
 	});
 	
@@ -98,11 +137,23 @@ include 'helpers.php';
 
 	<div class="nfl-teams">
 		<?php
-		$subscribed_nfl_teams = get_nfl_teams();
+		$subscribed_nfl_teams = get_nfl_teams_user_has_subscribed_to();
 		while($team = mysql_fetch_array($subscribed_nfl_teams))
 		{
 		?>
-		<div class="team-item-subscribed">
+		<div class="team-item-subscribed" id="<?php echo $team['id']; ?>">
+			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
+			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
+			<p class="game-date"><?php echo $team['name'] ?> </p>
+		</div>
+		<?php
+		}
+		
+		$unsubscribed_nfl_teams = get_nfl_teams_user_hasnt_subscribed_to();
+		while($team = mysql_fetch_array($unsubscribed_nfl_teams))
+		{
+		?>
+		<div class="team-item-unsubscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
 			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
@@ -110,16 +161,27 @@ include 'helpers.php';
 		<?php
 		}
 		?>
-		
 	</div>
 	
 	<div class="nba-teams">
 		<?php
-		$subscribed_nfl_teams = get_nba_teams();
+		$subscribed_nfl_teams = get_nba_teams_user_has_subscribed_to();
 		while($team = mysql_fetch_array($subscribed_nfl_teams))
 		{
 		?>
-		<div class="team-item-subscribed">
+		<div class="team-item-subscribed" id="<?php echo $team['id']; ?>">
+			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
+			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
+			<p class="game-date"><?php echo $team['name'] ?> </p>
+		</div>
+		<?php
+		}
+		
+		$unsubscribed_nfl_teams = get_nba_teams_user_hasnt_subscribed_to();
+		while($team = mysql_fetch_array($unsubscribed_nfl_teams))
+		{
+		?>
+		<div class="team-item-unsubscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
 			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
@@ -131,11 +193,23 @@ include 'helpers.php';
 	  
 	<div class="mlb-teams">
 		<?php
-		$subscribed_nfl_teams = get_mlb_teams();
+		$subscribed_nfl_teams = get_mlb_teams_user_has_subscribed_to();
 		while($team = mysql_fetch_array($subscribed_nfl_teams))
 		{
 		?>
-		<div class="team-item-subscribed">
+		<div class="team-item-subscribed" id="<?php echo $team['id']; ?>">
+			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
+			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
+			<p class="game-date"><?php echo $team['name'] ?> </p>
+		</div>
+		<?php
+		}
+		
+		$unsubscribed_nfl_teams = get_mlb_teams_user_hasnt_subscribed_to();
+		while($team = mysql_fetch_array($unsubscribed_nfl_teams))
+		{
+		?>
+		<div class="team-item-unsubscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
 			<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
