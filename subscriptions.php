@@ -143,7 +143,7 @@ include 'helpers.php';
 		?>
 		<div class="team-item-subscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
-			<img class="home-team-logo" src = "images/<?php echo $team['logourl']; ?>"/>
+			<img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $team['logourl']); ?>"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
 		</div>
 		<?php
@@ -155,7 +155,7 @@ include 'helpers.php';
 		?>
 		<div class="team-item-unsubscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
-			<img class="home-team-logo" src = "images/<?php echo $team['logourl']; ?>"/>
+			<img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $team['logourl']); ?>"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
 		</div>
 		<?php
@@ -171,7 +171,7 @@ include 'helpers.php';
 		?>
 		<div class="team-item-subscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
-			<img class="home-team-logo" src = "images/<?php echo $team['logourl']; ?>"/>
+			<img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $team['logourl']); ?>"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
 		</div>
 		<?php
@@ -183,7 +183,7 @@ include 'helpers.php';
 		?>
 		<div class="team-item-unsubscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
-			<img class="home-team-logo" src = "images/<?php echo $team['logourl']; ?>"/>
+			<img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $team['logourl']); ?>"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
 		</div>
 		<?php
@@ -199,7 +199,7 @@ include 'helpers.php';
 		?>
 		<div class="team-item-subscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
-			<img class="home-team-logo" src = "images/<?php echo $team['logourl']; ?>"/>
+			<img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $team['logourl']); ?>"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
 		</div>
 		<?php
@@ -211,7 +211,7 @@ include 'helpers.php';
 		?>
 		<div class="team-item-unsubscribed" id="<?php echo $team['id']; ?>">
 			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
-			<img class="home-team-logo" src = "images/<?php echo $team['logourl']; ?>"/>
+			<img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $team['logourl']); ?>"/>
 			<p class="game-date"><?php echo $team['name'] ?> </p>
 		</div>
 		<?php
