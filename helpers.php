@@ -3,6 +3,23 @@ session_start();
 include 'db_connect.php';
 date_default_timezone_set('America/Los_Angeles');
 
+function get_home_logo($row1)
+{
+    $home_team = mysql_query("SELECT logourl FROM team where id = $row1");
+    while($team = mysql_fetch_array($home_team))
+    {
+        return $team['logourl'];
+    }
+}
+
+function get_away_logo($row1)
+{
+    $home_team = mysql_query("SELECT logourl FROM team where id = $row1");
+    while($team = mysql_fetch_array($home_team))
+    {
+        return $team['logourl'];
+    }
+}
 
 function get_nfl_teams_user_has_subscribed_to()
 {
@@ -90,5 +107,7 @@ function get_games_for_user_with_id($userid)
 	return $games;
 	
 }
+
+
 
 ?>
