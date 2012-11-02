@@ -18,12 +18,11 @@ include "helpers.php";
 	
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
-
+</head>
 <script>
     var toggle = 0;
     $(function () {
         $(".calendar-item").click(function () {
-			alert("here");
             if ($(this).css("background-color") == 'rgb(8, 50, 66)' && toggle==0) {
                 $(this).css("background-color", "green");
                 $(this).css("height", "200px");
@@ -67,9 +66,12 @@ include "helpers.php";
 		{
 	?>
 	<div class="calendar-item">
-		<img class="home-team-logo" src = "http://www.wallpaperpimper.com/wallpaper/Football/Minnesota_Vikings/Minnesota-Vikings-Logo-1-NB7GN30U93-1280x1024.jpg"/>
-		<p class="game-date">Oct. 25, 8:30 p.m. EST </p>
-		<img class="away-team-logo" src = "http://sezyou.files.wordpress.com/2011/01/buccaneers_logo-217194536_std.gif"/>
+        <?php $home_team = get_home_logo($row['home_team_id']); ?>
+        <?php $away_team = get_away_logo($row['away_team_id']); ?>
+		<img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $home_team); ?>"/>
+		<p class="game-date"><?php echo $row['gamedate'] ?></p>
+        <p class="game-date"><?php echo $row['gametime']?></p>
+		<img class="away-team-logo" src = "images/<?php echo str_replace('"', "", $away_team); ?>"/>
 	</div>
 	<?php
 		}
