@@ -223,7 +223,7 @@ include 'helpers.php';
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 		<ul>
 			<li><a href="subscriptions.php" id="rss" data-icon="custom">Subscriptions</a></li>
-			<li><a href="index.php" id="calendar" data-icon="custom">Calendar</a></li>
+			<li><a href="index.php" rel="external" id="calendar" data-icon="custom">Calendar</a></li>
 			<li><a href="#" id="map" data-icon="custom">Maps</a></li>
 		</ul>
 		</div>
