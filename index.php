@@ -10,7 +10,7 @@ include "helpers.php";
 	<meta name="apple-mobile-web-app-capable" content="yes">
  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-
+     
 	<link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
 	<link rel="stylesheet" href="style.css" />
 	<link rel="apple-touch-icon" href="appicon.png" />
@@ -83,8 +83,8 @@ include "helpers.php";
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 		<ul>
 			<li><a href="subscriptions.php" rel="external" id="rss" data-icon="custom">Subscriptions</a></li>
-			<li><a href="index.php" id="calendar" data-icon="custom">Calendar</a></li>
-			<li><a href="#" id="map" data-icon="custom">Maps</a></li>
+			<li><a href="index.php" rel="external" id="calendar" data-icon="custom">Calendar</a></li>
+			<li><a href="maps.php" rel="external" id="map" data-icon="custom">Maps</a></li>
 		</ul>
 		</div>
 	</div>
