@@ -66,7 +66,7 @@ include "helpers.php";
 			<li><a href="subscriptions.php" rel="external" id="rss" data-icon="custom">Subscriptions</a></li>
 			<li><a href="index.php" rel="external" id="calendar" data-icon="custom">Calendar</a></li>
 			<li><a href="maps.php" rel="external" id="map" data-icon="custom">Maps</a></li>
-			<li><a href="players.php" rel="external" id="map" data-icon="custom">Players</a></li>
+			<li><a href="players.php" rel="external" id="players" data-icon="custom">Players</a></li>
 		</ul>
 		</div>
 	</div>
