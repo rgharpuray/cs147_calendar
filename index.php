@@ -45,7 +45,7 @@ include "helpers.php";
 			{
 				echo '<b class="info_header">' . $home_player['name'] . '</b></br>';	
 			}
-			echo "</br>";
+
 			$away_team_players = get_players_for_team_by_id($row['away_team_id']);
 			while($away_player = mysql_fetch_array($away_team_players))
 			{

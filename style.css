@@ -114,6 +114,7 @@
 	font-family:'Terminal Dosis', Arial, sans-serif;
 	font-size:16px;
 	color:#9C2A11;
+    float: left;
 }
 
 .info_header_alt {

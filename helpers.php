@@ -143,7 +143,7 @@ function user_subscribes_to_team($team_name)
 
 function get_games_for_user_with_id($userid)
 {
-	$games = mysql_query("SELECT * FROM game where home_team_id in (select id from team where id in (select team_id from user_subscribesto_team where user_id = 1))  or away_team_id in (select id from team where id in (select team_id from user_subscribesto_team where user_id = 1))");
+	$games = mysql_query("SELECT * FROM game where home_team_id in (select id from team where id in (select team_id from user_subscribesto_team where user_id = 1))  or away_team_id in (select id from team where id in (select team_id from user_subscribesto_team where user_id = 1)) order by gamedate,gametime");
 	return $games;
 	
 }
