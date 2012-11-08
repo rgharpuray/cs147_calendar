@@ -19,6 +19,7 @@ include "helpers.php";
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
     <script src="jquery.ui.map.full.min.js" type="text/javascript"></script
+    <script type="text/javascript" src="jquery.ui.map.js"></script>
     <script type="text/javascript" src="jquery.ui.map.extensions.js"></script>
 
 	
