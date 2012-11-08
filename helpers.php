@@ -27,6 +27,12 @@ function get_players()
 	return $players;
 }
 
+function get_players_for_team_by_id($team_id)
+{
+	$players = mysql_query("SELECT * FROM player where team_id = $team_id");
+	return $players;
+}
+
 function get_nfl_teams_user_has_subscribed_to()
 {
 	$nfl_teams = mysql_query("SELECT * FROM team where league = 'nfl' and id in (select team_id from user_subscribesto_team where user_id = 1)");

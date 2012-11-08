@@ -38,10 +38,21 @@ include "helpers.php";
         <p class="game-date"><?php echo $row['gametime']?></p>
 		<img class="away-team-logo" src = "images/<?php echo str_replace('"', "", $away_team); ?>"/></a></h3>
     <div>
-        <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget.
-        Integer ut neque. Vivamus nisi metus, molestie vel, gravida in,
-        condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros.
-        Nam mi. Proin viverra leo ut odio.</p>
+        <p style="width:400px;">
+        	<?php
+        	$home_team_players = get_players_for_team_by_id($row['home_team_id']);
+			while($home_player = mysql_fetch_array($home_team_players))
+			{
+				echo '<b class="info_header">' . $home_player['name'] . '</b></br>';	
+			}
+			echo "</br>";
+			$away_team_players = get_players_for_team_by_id($row['away_team_id']);
+			while($away_player = mysql_fetch_array($away_team_players))
+			{
+				echo '<b class="info_header_alt">' . $away_player['name'] . '</b></br>';	
+			}
+        	?>
+        </p>
     </div>
     
 </div>
