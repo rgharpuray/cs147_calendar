@@ -3,6 +3,34 @@ session_start();
 include 'db_connect.php';
 date_default_timezone_set('America/Los_Angeles');
 
+function get_home_name($row1)
+{
+    $home_team = mysql_query("SELECT name FROM team where id = $row1");
+    while($team = mysql_fetch_array($home_team))
+    {
+        return $team['name'];
+    }
+}
+
+function get_away_name($row1)
+{
+    $home_team = mysql_query("SELECT name FROM team where id = $row1");
+    while($team = mysql_fetch_array($home_team))
+    {
+        return $team['name'];
+    }
+}
+
+function get_home_address($row1)
+{
+    $home_team = mysql_query("SELECT address FROM team where id = $row1");
+    while($team = mysql_fetch_array($home_team))
+    {
+        return $team['address'];
+    }
+}
+
+
 function get_home_logo($row1)
 {
     $home_team = mysql_query("SELECT logourl FROM team where id = $row1");

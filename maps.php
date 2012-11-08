@@ -33,7 +33,7 @@ include "helpers.php";
                          $('#test1-result').html('localised !');
                          $(this).gmap3({
                              map: {
-                                 options: { zoom: 10 , center: latLng}
+                                 options: { zoom: 8 , center: latLng}
                              },
                              marker: 
                              {
@@ -49,12 +49,56 @@ include "helpers.php";
                  }
       });
 
+
+
       });
 
 
 
     </script>
 
+    <?php
+		$games = get_games_for_user_with_id(1);
+		while($row = mysql_fetch_array($games))
+		{
+	?>
+    <?php $home_address = get_home_address($row['home_team_id']); ?>
+    <?php $home_team = get_home_name($row['home_team_id']); ?>
+    <?php $away_team = get_away_name($row['away_team_id']); ?>
+
+    <script type="text/javascript">
+        $(function () {
+        $("#test1").gmap3({
+    marker:{
+      address: "<?php echo $home_address?>", data:"<?php echo $home_team?> vs <?php echo $away_team?><?php echo '<br />'.$row['gamedate']?> <?php echo '<br />'.$row['gametime']?>",
+      events:{
+      click: function(marker, event, context){
+        var map = $(this).gmap3("get"),
+          infowindow = $(this).gmap3({get:{name:"infowindow"}});
+        if (infowindow){
+          infowindow.open(map, marker);
+          infowindow.setContent(context.data);
+        } else {
+          $(this).gmap3({
+            infowindow:{
+              anchor:marker, 
+              options:{content: context.data}
+            }
+          });
+        }
+      },
+
+    }
+
+    },
+
+
+  });
+        });
+    </script>
+	<?php
+		}
+	?>
 
 </head>
 
