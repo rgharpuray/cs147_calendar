@@ -25,8 +25,7 @@ include "helpers.php";
 
 <script type="text/javascript">
         $(function() {
-                // Also works with: var yourStartLatLng = '59.3426606750, 18.0736160278';
-                var yourStartLatLng = new google.maps.LatLng(59.3426606750, 18.0736160278);
+
                 $('#map_canvas').gmap({'callback': function() {
 	var self = this;
 	self.getCurrentPosition(function(position, status) {
