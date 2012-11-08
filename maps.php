@@ -15,37 +15,47 @@ include "helpers.php";
 	<link rel="stylesheet" href="style.css" />
 	<link rel="apple-touch-icon" href="appicon.png" />
 	<link rel="apple-touch-startup-image" href="startup.png">
-    <script src="http://maps.google.com/maps/api/js?key=AIzaSyAeIJsJBXmgBfA2qP-zPdjNcbwD3G7sqdc&sensor=true" type="text/javascript"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
-    <script src="jquery.ui.map.full.min.js" type="text/javascript"></script
-    <script type="text/javascript" src="jquery.ui.map.js"></script>
-    <script type="text/javascript" src="jquery.ui.map.extensions.js"></script>
+    <script src="gmap3.min.js"></script>
 
-	
+	<script type="text/javascript">
 
-<script type="text/javascript">
-        $(function() {
 
-                $('#map_canvas').gmap({'callback': function() {
-	var self = this;
-	self.getCurrentPosition(function(position, status) {
-		if ( status === 'OK' ) {
-			var clientPosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-			self.addMarker({'position': clientPosition, 'bounds': true});
-			self.addShape('Circle', { 
-				'strokeWeight': 0, 
-				'fillColor': "#008595", 
-				'fillOpacity': 0.25, 
-				'center': clientPosition, 
-				'radius': 15, 
-				'clickable': false 
-			});
-		}
-	});   
-}});
-        });
-</script>
+     $(function () {
+
+         $('#test1').gmap3({
+
+             getgeoloc: {
+                 callback: function (latLng) {
+                     if (latLng) {
+                         $('#test1-result').html('localised !');
+                         $(this).gmap3({
+                             map: {
+                                 options: { zoom: 10 , center: latLng}
+                             },
+                             marker: 
+                             {
+                                 latLng: latLng
+                             }
+                         });
+                     } else
+                     {
+                    
+                         $('#test1-result').html('not localised !');
+                     }
+                 }
+                 }
+      });
+
+      });
+
+
+
+    </script>
+
+
 </head>
 
 
@@ -59,7 +69,7 @@ include "helpers.php";
 
 	<div data-role="content">	
 
-	<div id="map_canvas" style="width:500px;height:500px"></div>
+	<div id="test1" style="width:500px;height:500px"></div>
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
