@@ -21,6 +21,12 @@ function get_away_logo($row1)
     }
 }
 
+function get_players()
+{
+	$players = mysql_query("SELECT * FROM player");
+	return $players;
+}
+
 function get_nfl_teams_user_has_subscribed_to()
 {
 	$nfl_teams = mysql_query("SELECT * FROM team where league = 'nfl' and id in (select team_id from user_subscribesto_team where user_id = 1)");
