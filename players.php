@@ -21,44 +21,22 @@ include "helpers.php";
 </head>
 <body>
  <div data-role="header">
-    <h1>GameTime</h1>
+    <h1>Players</h1>
 </div>
 
-	<?php
-		$games = get_games_for_user_with_id(1);
-		while($row = mysql_fetch_array($games))
-		{
-	?>
+<ul data-role="listview" data-filter="true" class="ui-listview">
+				<?php
+					$players = get_players();
+					while($player = mysql_fetch_array($players))
+					{
+				?>
+				<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit"><?php echo $player['name']; ?></a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
 
-<div class="accordion">
-    <?php $home_team = get_home_logo($row['home_team_id']); ?>
-    <?php $away_team = get_away_logo($row['away_team_id']); ?>
-    <h3><a href="#"><img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $home_team); ?>"/>
-		<p class="game-date"><?php echo $row['gamedate'] ?></p>
-        <p class="game-date"><?php echo $row['gametime']?></p>
-		<img class="away-team-logo" src = "images/<?php echo str_replace('"', "", $away_team); ?>"/></a></h3>
-    <div>
-        <p style="width:400px;">
-        	<?php
-        	$home_team_players = get_players_for_team_by_id($row['home_team_id']);
-			while($home_player = mysql_fetch_array($home_team_players))
-			{
-				echo '<b class="info_header">' . $home_player['name'] . '</b></br>';	
-			}
-			echo "</br>";
-			$away_team_players = get_players_for_team_by_id($row['away_team_id']);
-			while($away_player = mysql_fetch_array($away_team_players))
-			{
-				echo '<b class="info_header_alt">' . $away_player['name'] . '</b></br>';	
-			}
-        	?>
-        </p>
-    </div>
-    
-</div>
-	<?php
-		}
-	?>
+				<?php
+					}
+				?>
+				<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-last ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">Volvo</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+			</ul>
 
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="c">

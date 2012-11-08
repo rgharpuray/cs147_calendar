@@ -107,3 +107,15 @@
 	padding:5px 10px;
 	margin:10px;
 }
+
+.info_header {
+	font-family:'Terminal Dosis', Arial, sans-serif;
+	font-size:16px;
+	color:#9C2A11;
+}
+
+.info_header_alt {
+	font-family:'Terminal Dosis', Arial, sans-serif;
+	font-size:16px;
+	color:#083242;
+}
