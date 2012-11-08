@@ -13,7 +13,6 @@
 		#rss .ui-icon { background:  url(glyphish-icons/bigrss.png) 100% 50% no-repeat; background-size: 27px 25px; }
 		#map .ui-icon { background:  url(glyphish-icons/radar.png) 100% 50% no-repeat; background-size: 26px 24px; }
 
-
 .calendar-item {
 	font-family:'Terminal Dosis', Arial, sans-serif;
 	width:90%;
@@ -34,7 +33,6 @@
 
 .home-team-logo {
 	border-radius:20px;
-	background-color:#083242;
 	width:50px;
 	height:50px;
 	padding:5px;
@@ -43,7 +41,6 @@
 
 .away-team-logo {
 	border-radius:20px;
-	background-color:#083242;
 	width:50px;
 	height:50px;
 	padding:5px;
