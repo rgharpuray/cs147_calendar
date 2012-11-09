@@ -2,7 +2,7 @@
 <?php 
 	include 'db_connect.php';
 	include 'helpers.php';
-	session_start();
+	
 	$error = "0";
 			// username and password sent from form 
 			$uname=$_POST['username']; 
@@ -99,6 +99,11 @@
 </div>
 
 	<div data-role="content">	
+
+		<?php if(!isset($_SESSION['id']) || $_SESSION['loggedIn'] != 'true')
+				{
+			?>	
+	
 				<form id="form1" name="form1" method="post" action="<?php $_SERVER['PHP_SELF'];?>">
 				<b><legend style="font-size:24px;margin-top:0px;color:#083242;">Login</legend></b>
 				</br>
@@ -139,6 +144,16 @@
   <a href="#" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" onclick="newAccount(); return false" rel="external">Create New Account</a>
 				</fieldset>
 			</form>
+			<?php
+			}
+			else
+			{
+				echo "You're currently signed in!" ;
+				?>
+				<a href="logout.php">Logout</a>
+				<?php
+			}
+			?>
 
 
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">

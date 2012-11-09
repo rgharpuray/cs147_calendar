@@ -1,6 +1,11 @@
 <!doctype html>
 <?php
 include "helpers.php";
+	//For cases where users are not logged in redirect back to login page.
+	if(!isset($_SESSION["loggedIn"])){
+					header("Location: register.php");
+					exit;
+				}
 ?>
 <html lang="en">
 <head>
