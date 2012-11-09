@@ -68,6 +68,8 @@
 </head> 
 
 
+
+
 <script type='text/javascript'>
 			$(function(){
 				$("#login").click(function() {
@@ -99,7 +101,7 @@
 </div>
 
 	<div data-role="content">	
-				<form id="form1" name="form1" method="post" action="<?php $_SERVER['PHP_SELF'];?>">
+				<form id="form1" name="form1" method="post" data-ajax="false" action="<?php $_SERVER['PHP_SELF'];?>">
 				<b><legend style="font-size:24px;margin-top:0px;color:#083242;">Login</legend></b>
 				</br>
 					<p>
