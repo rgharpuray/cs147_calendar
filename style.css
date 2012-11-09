@@ -12,6 +12,8 @@
 		#calendar .ui-icon { background:  url(glyphish-icons/83-calendar.png) 100% 50% no-repeat; background-size: 24px 22px; }
 		#rss .ui-icon { background:  url(glyphish-icons/bigrss.png) 100% 50% no-repeat; background-size: 27px 25px; }
 		#map .ui-icon { background:  url(glyphish-icons/radar.png) 100% 50% no-repeat; background-size: 26px 24px; }
+		#players .ui-icon { background:  url(glyphish-icons/112-group.png) 100% 50% no-repeat; background-size: 26px 24px; }
+
 
 .calendar-item {
 	font-family:'Terminal Dosis', Arial, sans-serif;
@@ -112,6 +114,7 @@
 	font-family:'Terminal Dosis', Arial, sans-serif;
 	font-size:16px;
 	color:#9C2A11;
+    float: left;
 }
 
 .info_header_alt {
