@@ -63,58 +63,66 @@ function get_players_for_team_by_id($team_id)
 
 function get_nfl_teams_user_has_subscribed_to()
 {
-	$nfl_teams = mysql_query("SELECT * FROM team where league = 'nfl' and id in (select team_id from user_subscribesto_team where user_id = 1)");
+	$current_user_id = $_SESSION['id'];
+	$nfl_teams = mysql_query("SELECT * FROM team where league = 'nfl' and id in (select team_id from user_subscribesto_team where user_id = $current_user_id)");
 	return $nfl_teams;
 }
 
 function get_nfl_teams_user_hasnt_subscribed_to() 
 {
-	$nfl_teams = mysql_query("SELECT * FROM team where league = 'nfl' and id not in (select team_id from user_subscribesto_team where user_id = 1)");
+	$current_user_id = $_SESSION['id'];
+	$nfl_teams = mysql_query("SELECT * FROM team where league = 'nfl' and id not in (select team_id from user_subscribesto_team where user_id = $current_user_id)");
 	return $nfl_teams;
 }
 
 function get_nba_teams_user_has_subscribed_to()
 {
-	$nba_teams = mysql_query("SELECT * FROM team where league = 'nba' and id in (select team_id from user_subscribesto_team where user_id = 1)");
+	$current_user_id = $_SESSION['id'];
+	$nba_teams = mysql_query("SELECT * FROM team where league = 'nba' and id in (select team_id from user_subscribesto_team where user_id = $current_user_id)");
 	return $nba_teams;
 }
 
 function get_nba_teams_user_hasnt_subscribed_to() 
 {
-	$nba_teams = mysql_query("SELECT * FROM team where league = 'nba' and id not in (select team_id from user_subscribesto_team where user_id = 1)");
+	$current_user_id = $_SESSION['id'];
+	$nba_teams = mysql_query("SELECT * FROM team where league = 'nba' and id not in (select team_id from user_subscribesto_team where user_id = $current_user_id)");
 	return $nba_teams;
 }
 
 function get_mlb_teams_user_has_subscribed_to()
 {
-	$mlb_teams = mysql_query("SELECT * FROM team where league = 'mlb' and id in (select team_id from user_subscribesto_team where user_id = 1)");
+	$current_user_id = $_SESSION['id'];
+	$mlb_teams = mysql_query("SELECT * FROM team where league = 'mlb' and id in (select team_id from user_subscribesto_team where user_id = $current_user_id)");
 	return $mlb_teams;
 }
 
 function get_mlb_teams_user_hasnt_subscribed_to() 
 {
-	$mlb_teams = mysql_query("SELECT * FROM team where league = 'mlb' and id not in (select team_id from user_subscribesto_team where user_id = 1)");
+	$current_user_id = $_SESSION['id'];
+	$mlb_teams = mysql_query("SELECT * FROM team where league = 'mlb' and id not in (select team_id from user_subscribesto_team where user_id = $current_user_id)");
 	return $mlb_teams;
 }
 
 function subscribe_user_to_team($team_id)
 {
-	$insert_query="INSERT INTO user_subscribesto_team(team_id, user_id) values($team_id, 1)";
+	$current_user_id = $_SESSION['id'];
+	$insert_query="INSERT INTO user_subscribesto_team(team_id, user_id) values($team_id, $current_user_id)";
 	mysql_query($insert_query);
 	return;
 }
 
 function unsubscribe_user_to_team($team_id)
 {
-	$delete_query="DELETE FROM user_subscribesto_team where team_id = $team_id and user_id = 1";
+	$current_user_id = $_SESSION['id'];
+	$delete_query="DELETE FROM user_subscribesto_team where team_id = $team_id and user_id = $current_user_id";
 	mysql_query($delete_query);
 	return;
 }
 
 function user_subscribes_to_team_with_id($team_id)
 {
-	
-	$subscription = mysql_query("SELECT * FROM user_subscribesto_team where user_id = 1 and team_id = $team_id");
+	$current_user_id = $_SESSION['id'];
+	$subscription = mysql_query("SELECT * FROM user_subscribesto_team where user_id = $current_user_id and team_id = $team_id");
 	if(mysql_num_rows($subscription) >= 1)
 	{
 		return 1;
@@ -128,8 +136,8 @@ function user_subscribes_to_team_with_id($team_id)
 
 function user_subscribes_to_team($team_name)
 {
-	
-	$subscription = mysql_query("SELECT * FROM user_subscribesto_team where user_id = 1 and team_id in (select id from team where name = '$team_name')");
+	$current_user_id = $_SESSION['id'];
+	$subscription = mysql_query("SELECT * FROM user_subscribesto_team where user_id = $current_user_id and team_id in (select id from team where name = '$team_name')");
 	if(mysql_num_rows($subscription) >= 1)
 	{
 		return 1;
@@ -143,7 +151,8 @@ function user_subscribes_to_team($team_name)
 
 function get_games_for_user_with_id($userid)
 {
-	$games = mysql_query("SELECT * FROM game where home_team_id in (select id from team where id in (select team_id from user_subscribesto_team where user_id = 1))  or away_team_id in (select id from team where id in (select team_id from user_subscribesto_team where user_id = 1)) order by gamedate,gametime");
+	$current_user_id = $_SESSION['id'];
+	$games = mysql_query("SELECT * FROM game where home_team_id in (select id from team where id in (select team_id from user_subscribesto_team where user_id = $current_user_id))  or away_team_id in (select id from team where id in (select team_id from user_subscribesto_team where user_id = $current_user_id)) order by gamedate,gametime");
 	return $games;
 	
 }

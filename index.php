@@ -25,7 +25,7 @@ include "helpers.php";
 </div>
 
 	<?php
-		$games = get_games_for_user_with_id(1);
+		$games = get_games_for_user_with_id($_SESSION['id']);
 		while($row = mysql_fetch_array($games))
 		{
 	?>
@@ -61,12 +61,13 @@ include "helpers.php";
 	?>
 
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
-		<div data-role="navbar" class="nav-glyphish-example" data-grid="c">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
 		<ul>
 			<li><a href="subscriptions.php" rel="external" id="rss" data-icon="custom">Subscriptions</a></li>
 			<li><a href="index.php" rel="external" id="calendar" data-icon="custom">Calendar</a></li>
 			<li><a href="maps.php" rel="external" id="map" data-icon="custom">Maps</a></li>
 			<li><a href="players.php" rel="external" id="players" data-icon="custom">Players</a></li>
+			<li><a href="register.php" rel="external" id="players" data-icon="custom">Login/Register</a></li>
 		</ul>
 		</div>
 	</div>
