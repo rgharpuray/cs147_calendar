@@ -3,6 +3,34 @@ session_start();
 include 'db_connect.php';
 date_default_timezone_set('America/Los_Angeles');
 
+function get_home_name($row1)
+{
+    $home_team = mysql_query("SELECT name FROM team where id = $row1");
+    while($team = mysql_fetch_array($home_team))
+    {
+        return $team['name'];
+    }
+}
+
+function get_away_name($row1)
+{
+    $home_team = mysql_query("SELECT name FROM team where id = $row1");
+    while($team = mysql_fetch_array($home_team))
+    {
+        return $team['name'];
+    }
+}
+
+function get_home_address($row1)
+{
+    $home_team = mysql_query("SELECT address FROM team where id = $row1");
+    while($team = mysql_fetch_array($home_team))
+    {
+        return $team['address'];
+    }
+}
+
+
 function get_home_logo($row1)
 {
     $home_team = mysql_query("SELECT logourl FROM team where id = $row1");
@@ -115,7 +143,7 @@ function user_subscribes_to_team($team_name)
 
 function get_games_for_user_with_id($userid)
 {
-	$games = mysql_query("SELECT * FROM game where home_team_id in (select id from team where id in (select team_id from user_subscribesto_team where user_id = 1))  or away_team_id in (select id from team where id in (select team_id from user_subscribesto_team where user_id = 1))");
+	$games = mysql_query("SELECT * FROM game where home_team_id in (select id from team where id in (select team_id from user_subscribesto_team where user_id = 1))  or away_team_id in (select id from team where id in (select team_id from user_subscribesto_team where user_id = 1)) order by gamedate,gametime");
 	return $games;
 	
 }
