@@ -33,25 +33,26 @@ include "helpers.php";
                          $('#test1-result').html('localised !');
                          $(this).gmap3({
                              map: {
-                                 options: { zoom: 8 , center: latLng}
+                                 options: { zoom: 8, center: latLng }
                              },
-                             marker: 
+                             marker:
                              {
-                                 latLng: latLng
+                                 values: [
+                                 { latLng: latLng, options: { icon: "http://maps.google.com/mapfiles/marker_green.png"} }
+                                 ]
                              }
                          });
-                     } else
-                     {
-                    
+                     } else {
+
                          $('#test1-result').html('not localised !');
                      }
                  }
-                 }
-      });
+             }
+         });
 
 
 
-      });
+     });
 
 
 
