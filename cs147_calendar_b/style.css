@@ -1,0 +1,157 @@
+@import url(http://fonts.googleapis.com/css?family=Terminal+Dosis);
+
+		.nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+		.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+		#home .ui-icon { background:  url(glyphish-icons/53-house.png) 100% 50% no-repeat; background-size: 24px 22px; }
+		#key .ui-icon { background: url(glyphish-icons/radar.png) 50% 50% no-repeat; background-size: 12px 26px; }
+		#email .ui-icon { background:  url(glyphish-icons/18-envelope.png) 50% 50% no-repeat; background-size: 24px 16px;  }
+		#login .ui-icon { background:  url(glyphish-icons/30-key.png) 50% 50% no-repeat;  background-size: 12px 26px; }
+		#beer .ui-icon { background:  url(glyphish-icons/88-beermug.png) 50% 50% no-repeat;  background-size: 22px 27px; }
+		#coffee .ui-icon { background:  url(glyphish-icons/100-coffee.png) 50% 50% no-repeat;  background-size: 20px 24px; }
+		#skull .ui-icon { background:  url(glyphish-icons/21-skull.png) 50% 50% no-repeat;  background-size: 22px 24px; }
+		#calendar .ui-icon { background:  url(glyphish-icons/83-calendar.png) 100% 50% no-repeat; background-size: 24px 22px; }
+		#rss .ui-icon { background:  url(glyphish-icons/bigrss.png) 100% 50% no-repeat; background-size: 27px 25px; }
+		#map .ui-icon { background:  url(glyphish-icons/radar.png) 100% 50% no-repeat; background-size: 26px 24px; }
+		#players .ui-icon { background:  url(glyphish-icons/112-group.png) 100% 50% no-repeat; background-size: 26px 24px; }
+		#popupPanel {
+		    width: 90px;
+            height: 40px;
+		    border: 1px solid #000;
+		    border-right: none;
+		    background: rgba(255,255,255,.5);
+		    margin: -1px 0;
+            border-radius: 15px;
+		}
+        #popupPanel2 {
+		    width: 100px;
+            height: 40px;
+		    border: 1px solid #000;
+		    border-right: none;
+		    background: rgba(255,255,255,.5);
+		    margin: -1px 0;
+            border-radius: 15px;
+		}
+        #popupText {
+            padding: 0px; 
+            color: #000000;
+        }
+
+
+
+.calendar-item {
+	font-family:'Terminal Dosis', Arial, sans-serif;
+	width:90%;
+	height:60px;
+	background-color:#083242;
+	color:white;
+	border-radius:10px;
+	padding:5px 50px;
+	margin:10px;
+}
+
+.more-game-info {
+	font-size:13px;
+	width:300px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.home-team-logo {
+	border-radius:20px;
+	width:50px;
+	height:50px;
+	padding:5px;
+	float:left;
+}
+
+.away-team-logo {
+	border-radius:20px;
+	width:50px;
+	height:50px;
+	padding:5px;
+	float:right;
+	position:relative;
+	top:-80px;
+}
+
+.home-team-logo-sub {
+	border-radius:20px;
+	width:50px;
+	height:50px;
+	padding:5px 35px;
+
+}
+
+.game-date {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+	font-size:14px;
+	font-family:'Terminal Dosis', Arial, sans-serif;
+	top:-35px;
+	<!--position:relative;-->
+	left:70px;
+}
+
+.team-name {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+	font-size:14px;
+	font-family:'Terminal Dosis', Arial, sans-serif;
+	top:-35px;
+	position:relative;
+	left:70px;
+}
+
+.league-selectors {
+	margin-left: auto;
+    margin-right: auto;
+	width:400px;
+}
+
+.league-icon-container {
+	padding:10px 10px;
+}
+
+.league-icon {
+	height:60px;
+	opacity:0.3;
+}
+
+.team-item-subscribed {
+	font-family:'Terminal Dosis', Arial, sans-serif;
+	width:43%;
+	height:60px;
+	background-color:#66CC33;
+	color:white;
+	border-radius:10px;
+	padding:5px 5px;
+	margin:5px;
+    float: left;
+}
+
+.team-item-unsubscribed {
+	font-family:'Terminal Dosis', Arial, sans-serif;
+	width:43%;
+	height:60px;
+	background-color:#FF0000;
+	color:white;
+	border-radius:10px;
+	padding:5px 5px;
+	margin:5px;
+    float: left;
+}
+
+.info_header {
+	font-family:'Terminal Dosis', Arial, sans-serif;
+	font-size:16px;
+	color:#9C2A11;
+    float: left;
+}
+
+.info_header_alt {
+	font-family:'Terminal Dosis', Arial, sans-serif;
+	font-size:16px;
+	color:#083242;
+}
