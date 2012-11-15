@@ -79,6 +79,22 @@ include 'helpers.php';
 			
 			return false;
 		});
+		
+		$(".team-item-special").click(function() {
+			var team_id = $(this).attr('id');
+			var box = $(this);
+			var dataString = "team_id=" + team_id;
+			$.ajax({
+				type: "POST",
+				url: "subscribe_to_team.php",
+				data: dataString,
+				cache: false,
+				success: function(data){
+				}
+			});
+			
+			return false;
+		});
 	});
 	
 	function toggleNBA() {
@@ -139,6 +155,11 @@ include 'helpers.php';
 	</div>
 
 	<div class="nfl-teams">
+		<div class="team-item-special" id="<?php echo -1; ?>">
+			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
+			<img class="home-team-logo" src = "http://sportsmediamasters.com/smm/wp-content/uploads/2012/04/NFL-logo.gif"/>
+			<p class="team-name">All Teams in the NFL</p>
+		</div>
 		<?php
 		$subscribed_nfl_teams = get_nfl_teams_user_has_subscribed_to();
 		while($team = mysql_fetch_array($subscribed_nfl_teams))
@@ -167,6 +188,11 @@ include 'helpers.php';
 	</div>
 	
 	<div class="nba-teams">
+		<div class="team-item-special" id="<?php echo -2; ?>">
+			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
+			<img class="home-team-logo" src = "http://sportsmediamasters.com/smm/wp-content/uploads/2012/04/NFL-logo.gif"/>
+			<p class="team-name">All Teams in the NBA</p>
+		</div>
 		<?php
 		$subscribed_nfl_teams = get_nba_teams_user_has_subscribed_to();
 		while($team = mysql_fetch_array($subscribed_nfl_teams))
@@ -195,6 +221,11 @@ include 'helpers.php';
 	</div>
 	  
 	<div class="mlb-teams">
+		<div class="team-item-special" id="<?php echo -3; ?>">
+			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
+			<img class="home-team-logo" src = "http://sportsmediamasters.com/smm/wp-content/uploads/2012/04/NFL-logo.gif"/>
+			<p class="team-name">All Teams in the MLB</p>
+		</div>
 		<?php
 		$subscribed_nfl_teams = get_mlb_teams_user_has_subscribed_to();
 		while($team = mysql_fetch_array($subscribed_nfl_teams))
