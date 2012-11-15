@@ -64,7 +64,7 @@ include "helpers.php";
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
 		<ul>
 			<li><a href="subscriptions.php" data-ajax="false" id="rss" data-icon="custom">Subscriptions</a></li>
-			<li><a href="index.php" data-ajax="false" id="calendar" data-icon="custom">Calendar</a></li>
+			<li><a href="index.php" data-ajax="false" id="calendar" data-icon="custom" class="ui-btn-active">Calendar</a></li>
 			<li><a href="maps.php" data-ajax="false" id="map" data-icon="custom">Maps</a></li>
 			<li><a href="players.php" data-ajax="false" id="players" data-icon="custom">Players</a></li>
 			<li><a href="register.php" data-ajax="false" id="players" data-icon="custom">Login/Register</a></li>
