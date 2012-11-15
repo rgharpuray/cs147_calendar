@@ -1,0 +1,9 @@
+insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('nfl', "atlanta falcons", "new england patriots", '11-04-12', '19:10');
+insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('nfl', "cowboys", "giants", '11-04-12', '22:00');
+insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('nfl', "pittsburgh steelers", "denver broncos", '11-04-12', '18:15');
+insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('mlb', "san francisco giants", "detroit tigers", '11-01-12', '20:00');
+insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('mlb', "new york yankees", "boston red sox", '11-10-12', '18:05');
+insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('mlb', "oakland as", "texas rangers", '11-05-12', '20:00');
+insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('nba', "los angeles lakers", "los angeles clippers", '11-06-12', '18:00');
+insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('nba', "miami heat", "boston celtics", '11/04/12', '19:15');
+insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('nba', "oklahoma city thunder", "new york knicks", '11-02-12', '19:10');
