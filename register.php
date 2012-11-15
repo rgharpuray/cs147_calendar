@@ -104,7 +104,7 @@
 				{
 			?>	
 	
-				<form id="form1" name="form1" method="post" action="<?php $_SERVER['PHP_SELF'];?>">
+				<form id="form1" name="form1" method="post" data-ajax="false" action="<?php $_SERVER['PHP_SELF'];?>">
 				<b><legend style="font-size:24px;margin-top:0px;color:#083242;">Login</legend></b>
 				</br>
 					<p>
@@ -141,7 +141,7 @@
 				<p><label for="confirm_new_password" style="font-size:18px;">Confirm Password:</label>
 				<input id="confirm_new_password" type="password" name="confirm_new_password" style="font-size:14px;" /></p>
 				</br>
-  <a href="#" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" onclick="newAccount(); return false" rel="external">Create New Account</a>
+  <a href="#" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" onclick="newAccount(); return false" data-ajax="false">Create New Account</a>
 				</fieldset>
 			</form>
 			<?php
@@ -159,11 +159,11 @@
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
 		<ul>
-			<li><a href="subscriptions.php" rel="external" id="rss" data-icon="custom">Subscriptions</a></li>
-			<li><a href="index.php" rel="external" id="calendar" data-icon="custom">Calendar</a></li>
-			<li><a href="maps.php" rel="external" id="map" data-icon="custom">Maps</a></li>
-			<li><a href="players.php" rel="external" id="players" data-icon="custom">Players</a></li>
-			<li><a href="register.php" rel="external" id="players" data-icon="custom">Login/Register</a></li>
+			<li><a href="subscriptions.php" data-ajax="false" id="rss" data-icon="custom">Subscriptions</a></li>
+			<li><a href="index.php" data-ajax="false" id="calendar" data-icon="custom">Calendar</a></li>
+			<li><a href="maps.php" data-ajax="false" id="map" data-icon="custom">Maps</a></li>
+			<li><a href="players.php" data-ajax="false" id="players" data-icon="custom">Players</a></li>
+			<li><a href="register.php" data-ajax="false" id="players" data-icon="custom">Login/Register</a></li>
 		</ul>
 		</div>
 	</div>
