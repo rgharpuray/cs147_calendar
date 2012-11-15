@@ -157,6 +157,16 @@ function get_games_for_user_with_id($userid)
 	
 }
 
+function get_users_name()
+{  
+	$current_user_id = $_SESSION['id'];
+	$user = mysql_query("SELECT name FROM user where id = $current_user_id");
+	while($usr = mysql_fetch_array($user))
+	{
+		return $usr['name'];
+	}
+}
+
 
 
 ?>
