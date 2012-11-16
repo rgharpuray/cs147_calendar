@@ -11,6 +11,7 @@ include 'helpers.php';
 <html>
 
 <head>
+    
 	<title>GameTime</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,6 +34,7 @@ include 'helpers.php';
 		$(".mlb-teams").hide();
 		$(".nba-teams").hide();
 		$("#nfl").css("opacity", 1.0);
+        window.optimizely = window.optimizely || [];
 		$(".team-item-subscribed").click(function() {			
 			var team_id = $(this).attr('id');
 			var box = $(this);
@@ -46,10 +48,12 @@ include 'helpers.php';
 					if(data == "subscribed")
 					{
 						box.removeClass('team-item-unsubscribed').addClass('team-item-subscribed');
+                        window.optimizely.push(['trackEvent', 'TEAM_SUBBED', 1000]);
 					}
 					else
 					{
 						box.removeClass('team-item-subscribed').addClass('team-item-unsubscribed');
+                        window.optimizely.push(['trackEvent', 'TEAM_SUBBED', -1000]);
 					}				
 				}
 			});
@@ -69,10 +73,12 @@ include 'helpers.php';
 					if(data == "subscribed")
 					{
 						box.removeClass('team-item-unsubscribed').addClass('team-item-subscribed');
+                        window.optimizely.push(['trackEvent', 'TEAM_SUBBED', 1000]);
 					}
 					else
 					{
 						box.removeClass('team-item-subscribed').addClass('team-item-unsubscribed');
+                        window.optimizely.push(['trackEvent', 'TEAM_SUBBED', -1000]);
 					}
 				}
 			});
@@ -141,6 +147,7 @@ include 'helpers.php';
 
 
 <div data-role="page" id="filter">
+    <script src="//cdn.optimizely.com/js/141455121.js"></script>
 <!-- /header -->
 <div data-role="header">
     <h1>Subscriptions</h1>
