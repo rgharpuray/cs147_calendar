@@ -8,7 +8,7 @@ include 'helpers.php';
 <html>
 
 <head>
-    <script src="//cdn.optimizely.com/js/141455121.js"></script>
+    
 	<title>GameTime</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -138,6 +138,7 @@ include 'helpers.php';
 
 
 <div data-role="page" id="filter">
+    <script src="//cdn.optimizely.com/js/141455121.js"></script>
 <!-- /header -->
 <div data-role="header">
     <h1>Subscriptions</h1>
