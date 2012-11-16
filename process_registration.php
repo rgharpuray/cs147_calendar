@@ -33,20 +33,20 @@ if(mysql_num_rows($existing_results) <= 0 && $passwords_match == TRUE && filter_
 		//add testing deadlines for this user based on the range of testing deadlines
 		$user_id = mysql_insert_id();
 		
-		if(isset($hometown))
-		{
-			$teams = mysql_query("select * from team where name like %$hometown%");
-			while($team = mysql_fetch_array($teams))
-			{
-				subscribe_user_to_team($team['id']);
-			}
-		}
-		
 		//auto-login user upon registration
 		$_SESSION['username']= $username;
 		$_SESSION['password']= $password;
 		$_SESSION['loggedIn']= "true";
 		$_SESSION['id'] = $user_id;
+		
+		if(isset($hometown))
+		{
+			$teams = mysql_query("select * from team where name like '%$hometown%'");
+			while($team = mysql_fetch_array($teams))
+			{
+				subscribe_user_to_team($team['id']);
+			}
+		}
 }
 else
 {
