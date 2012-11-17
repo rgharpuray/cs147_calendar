@@ -8,6 +8,10 @@ include 'helpers.php';
 <html>
 
 <head>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 80750c0cd70f88417780b4f2e1824339de2c05c3
 	<title>GameTime</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,6 +36,10 @@ include 'helpers.php';
         $(".mlb-teams").hide();
         $(".nba-teams").hide();
         $("#nfl").css("opacity", 1.0);
+<<<<<<< HEAD
+=======
+        window.optimizely = window.optimizely || [];
+>>>>>>> 80750c0cd70f88417780b4f2e1824339de2c05c3
         $(".team-item-subscribed").click(function () {
             var team_id = $(this).attr('id');
             var box = $(this);
@@ -44,6 +52,7 @@ include 'helpers.php';
                 success: function (data) {
                     if (data == "subscribed") {
                         box.removeClass('team-item-unsubscribed').addClass('team-item-subscribed');
+<<<<<<< HEAD
                         $("#popupPanel").popup({transition: "fade"});
                         $("#popupPanel").popup("open");
                         setTimeout(function () { $("#popupPanel").popup("close"); }, 1000);
@@ -53,6 +62,19 @@ include 'helpers.php';
                         $("#popupPanel2").popup({transition: "fade"});
                         $("#popupPanel2").popup("open");
                         setTimeout(function () { $("#popupPanel2").popup("close"); }, 1000);
+=======
+                        $("#popupPanel").popup({ transition: "fade" });
+                        $("#popupPanel").popup("open");
+                        setTimeout(function () { $("#popupPanel").popup("close"); }, 1000);
+                        window.optimizely.push(['trackEvent', 'TEAM_SUBBED', 1000]);
+                    }
+                    else {
+                        box.removeClass('team-item-subscribed').addClass('team-item-unsubscribed');
+                        $("#popupPanel2").popup({ transition: "fade" });
+                        $("#popupPanel2").popup("open");
+                        setTimeout(function () { $("#popupPanel2").popup("close"); }, 1000);
+                        window.optimizely.push(['trackEvent', 'TEAM_SUBBED', -1000]);
+>>>>>>> 80750c0cd70f88417780b4f2e1824339de2c05c3
                     }
                 }
             });
@@ -72,6 +94,7 @@ include 'helpers.php';
                 success: function (data) {
                     if (data == "subscribed") {
                         box.removeClass('team-item-unsubscribed').addClass('team-item-subscribed');
+<<<<<<< HEAD
                         $("#popupPanel").popup({transition: "fade"});
                         $("#popupPanel").popup("open");
                         setTimeout(function () { $("#popupPanel").popup("close"); }, 1000);
@@ -81,6 +104,19 @@ include 'helpers.php';
                         $("#popupPanel2").popup({transition: "fade"});
                         $("#popupPanel2").popup("open");
                         setTimeout(function () { $("#popupPanel2").popup("close"); }, 1000);
+=======
+                        $("#popupPanel").popup({ transition: "fade" });
+                        $("#popupPanel").popup("open");
+                        setTimeout(function () { $("#popupPanel").popup("close"); }, 1000);
+                        window.optimizely.push(['trackEvent', 'TEAM_SUBBED', 1000]);
+                    }
+                    else {
+                        box.removeClass('team-item-subscribed').addClass('team-item-unsubscribed');
+                        $("#popupPanel2").popup({ transition: "fade" });
+                        $("#popupPanel2").popup("open");
+                        setTimeout(function () { $("#popupPanel2").popup("close"); }, 1000);
+                        window.optimizely.push(['trackEvent', 'TEAM_SUBBED', -1000]);
+>>>>>>> 80750c0cd70f88417780b4f2e1824339de2c05c3
                     }
                 }
             });
@@ -132,6 +168,10 @@ include 'helpers.php';
 
 
 <div data-role="page" id="filter">
+<<<<<<< HEAD
+=======
+    <script src="//cdn.optimizely.com/js/141455121.js"></script>
+>>>>>>> 80750c0cd70f88417780b4f2e1824339de2c05c3
 <!-- /header -->
 <div data-role="header">
     <h1>Subscriptions</h1>

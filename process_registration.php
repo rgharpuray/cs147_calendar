@@ -1,5 +1,6 @@
 <?php
 include 'db_connect.php';
+include 'helpers.php';
 
 $email_check = '';
 $return_arr = array();
@@ -7,6 +8,7 @@ $return_arr = array();
 $new_name = $_REQUEST['name'];
 $username = $_REQUEST['email'];
 $password = $_REQUEST['new_password'];
+$hometown = $_REQUEST['hometown'];
 
 //check to make sure passwords match, and that username/email is not already taken.
 $existing_results = mysql_query("SELECT * from user where username = '" . $username . "'");
@@ -19,7 +21,7 @@ if($password == $_REQUEST['confirm_new_password'])
 
 if(mysql_num_rows($existing_results) <= 0 && $passwords_match == TRUE && filter_var($username, FILTER_VALIDATE_EMAIL))
 {	
-		$new_user_query = "insert into user (username, password, fullname)  values ('" . $username . "', '" . $password . "', '" . $new_name . "');";
+		$new_user_query = "insert into user (username, password, fullname, hometown)  values ('" . $username . "', '" . $password . "', '" . $new_name . "', '" . $hometown . "');";
 		if (!mysql_query($new_user_query, $con))
 		{
 			die('Error: ' . mysql_error());
@@ -36,6 +38,15 @@ if(mysql_num_rows($existing_results) <= 0 && $passwords_match == TRUE && filter_
 		$_SESSION['password']= $password;
 		$_SESSION['loggedIn']= "true";
 		$_SESSION['id'] = $user_id;
+		
+		if(isset($hometown))
+		{
+			$teams = mysql_query("select * from team where name like '%$hometown%'");
+			while($team = mysql_fetch_array($teams))
+			{
+				subscribe_user_to_team($team['id']);
+			}
+		}
 }
 else
 {

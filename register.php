@@ -146,6 +146,13 @@
 				<p><label for="confirm_new_password" style="font-size:18px;">Confirm Password:</label>
 				<input id="confirm_new_password" type="password" name="confirm_new_password" style="font-size:14px;" /></p>
 				</br>
+				<p><label for="hometown" style="font-size:18px;">Home Town</label>
+				<select name="hometown" id="hometown">
+				<option value="new york">New York</option>
+				<option value="san fransisco">San Fransisco</option>
+				</select>
+				</p>
+				</br>
   <a href="#" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" onclick="newAccount(); return false" data-ajax="false">Create New Account</a>
 				</fieldset>
 			</form>

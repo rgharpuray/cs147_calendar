@@ -11,6 +11,7 @@ include 'helpers.php';
 <html>
 
 <head>
+    
 	<title>GameTime</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,6 +34,7 @@ include 'helpers.php';
 		$(".mlb-teams").hide();
 		$(".nba-teams").hide();
 		$("#nfl").css("opacity", 1.0);
+        window.optimizely = window.optimizely || [];
 		$(".team-item-subscribed").click(function() {			
 			var team_id = $(this).attr('id');
 			var box = $(this);
@@ -46,10 +48,12 @@ include 'helpers.php';
 					if(data == "subscribed")
 					{
 						box.removeClass('team-item-unsubscribed').addClass('team-item-subscribed');
+                        window.optimizely.push(['trackEvent', 'TEAM_SUBBED', 1000]);
 					}
 					else
 					{
 						box.removeClass('team-item-subscribed').addClass('team-item-unsubscribed');
+                        window.optimizely.push(['trackEvent', 'TEAM_SUBBED', -1000]);
 					}				
 				}
 			});
@@ -69,11 +73,29 @@ include 'helpers.php';
 					if(data == "subscribed")
 					{
 						box.removeClass('team-item-unsubscribed').addClass('team-item-subscribed');
+                        window.optimizely.push(['trackEvent', 'TEAM_SUBBED', 1000]);
 					}
 					else
 					{
 						box.removeClass('team-item-subscribed').addClass('team-item-unsubscribed');
+                        window.optimizely.push(['trackEvent', 'TEAM_SUBBED', -1000]);
 					}
+				}
+			});
+			
+			return false;
+		});
+		
+		$(".team-item-special").click(function() {
+			var team_id = $(this).attr('id');
+			var box = $(this);
+			var dataString = "team_id=" + team_id;
+			$.ajax({
+				type: "POST",
+				url: "subscribe_to_team.php",
+				data: dataString,
+				cache: false,
+				success: function(data){
 				}
 			});
 			
@@ -125,6 +147,7 @@ include 'helpers.php';
 
 
 <div data-role="page" id="filter">
+    <script src="//cdn.optimizely.com/js/141455121.js"></script>
 <!-- /header -->
 <div data-role="header">
     <h1>Subscriptions</h1>
@@ -139,6 +162,11 @@ include 'helpers.php';
 	</div>
 
 	<div class="nfl-teams">
+		<div class="team-item-special" id="<?php echo -1; ?>">
+			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
+			<img class="home-team-logo" src = "http://sportsmediamasters.com/smm/wp-content/uploads/2012/04/NFL-logo.gif"/>
+			<p class="team-name">All Teams in the NFL</p>
+		</div>
 		<?php
 		$subscribed_nfl_teams = get_nfl_teams_user_has_subscribed_to();
 		while($team = mysql_fetch_array($subscribed_nfl_teams))
@@ -167,6 +195,11 @@ include 'helpers.php';
 	</div>
 	
 	<div class="nba-teams">
+		<div class="team-item-special" id="<?php echo -2; ?>">
+			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
+			<img class="home-team-logo" src = "http://sportsmediamasters.com/smm/wp-content/uploads/2012/04/NFL-logo.gif"/>
+			<p class="team-name">All Teams in the NBA</p>
+		</div>
 		<?php
 		$subscribed_nfl_teams = get_nba_teams_user_has_subscribed_to();
 		while($team = mysql_fetch_array($subscribed_nfl_teams))
@@ -195,6 +228,11 @@ include 'helpers.php';
 	</div>
 	  
 	<div class="mlb-teams">
+		<div class="team-item-special" id="<?php echo -3; ?>">
+			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
+			<img class="home-team-logo" src = "http://sportsmediamasters.com/smm/wp-content/uploads/2012/04/NFL-logo.gif"/>
+			<p class="team-name">All Teams in the MLB</p>
+		</div>
 		<?php
 		$subscribed_nfl_teams = get_mlb_teams_user_has_subscribed_to();
 		while($team = mysql_fetch_array($subscribed_nfl_teams))
