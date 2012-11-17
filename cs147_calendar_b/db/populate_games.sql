@@ -1,9 +1,0 @@
-insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('nfl', 1, 2, '11-04-12', '19:10');
-insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('nfl', 3, 4, '11-04-12', '22:00');
-insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('nfl', 5, 6, '11-04-12', '18:15');
-insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('mlb', 7, 8, '11-01-12', '20:00');
-insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('mlb', 9, 10, '11-10-12', '18:05');
-insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('mlb', 11, 12, '11-05-12', '20:00');
-insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('nba', 13, 14, '11-06-12', '18:00');
-insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('nba', 15, 16, '11/04/12', '19:15');
-insert into game(league, home_team_id, away_team_id, gamedate, gametime) values('nba', 17, 18, '11-02-12', '19:10');
