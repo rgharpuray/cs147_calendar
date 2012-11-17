@@ -101,14 +101,13 @@
 </div>
 
 	<div data-role="content">	
-<<<<<<< HEAD
-=======
+
 
 		<?php if(!isset($_SESSION['id']) || $_SESSION['loggedIn'] != 'true')
 				{
 			?>	
 	
->>>>>>> 376fd1a85708a9f2901fd9d939150dd1016f315d
+
 				<form id="form1" name="form1" method="post" data-ajax="false" action="<?php $_SERVER['PHP_SELF'];?>">
 				<b><legend style="font-size:24px;margin-top:0px;color:#083242;">Login</legend></b>
 				</br>
