@@ -52,9 +52,8 @@
 }
 
 .game-date {
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
+	text-align:center;
+   width: 200px;
 	font-size:14px;
 	font-family:'Terminal Dosis', Arial, sans-serif;
 	top:-35px;
@@ -98,14 +97,6 @@
 	padding:5px 10px;
 	margin:10px;
 }
-.team-item-subscribed:hover {
-	background:#18ca4a;
-	color:white;
-}
-.team-item-subscribed:active {
-	background:#9C2a00;
-	color:white;
-}
 
 .team-item-special {
 	font-family:'Terminal Dosis', Arial, sans-serif;
@@ -117,10 +108,8 @@
 	color:black;
 	border:1px solid black;
 }
-.team-item-special:hover {
-	background:#404040;
-	color:white;
-}
+
+
 .team-item-special:active {
 	background:black;
 	color:white;
@@ -135,15 +124,6 @@
 	border-radius:10px;
 	padding:5px 10px;
 	margin:10px;
-}
-.team-item-unsubscribed:hover {
-	background:#e93f00;
-	
-	color:white;
-}
-.team-item-unsubscribed:active {
-	background:#108631;
-	color:white;
 }
 
 .info_header {
@@ -194,12 +174,6 @@
 	font-size:14px;
 }
 
-.button-link-special:hover {
-    background: #909090;
-    border: solid 1px #2A4E77;
-    text-decoration: none;
-	color:white;
-}
 .button-link-special:active {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
@@ -209,12 +183,6 @@
 	background:black;
 }
 
-.button-link-add:hover {
-    background: #909090;
-    border: solid 1px #2A4E77;
-    text-decoration: none;
-	color:white;
-}
 .button-link-add:active {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
