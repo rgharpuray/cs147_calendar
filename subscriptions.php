@@ -133,14 +133,6 @@ include 'helpers.php';
 		$(".nba-teams").hide();
 	}
 	
-	function moreDetail(moreDetail)
-	{
-		alert(moreDetail.parentNode.parentNode.className);
-		var div = moreDetail.parentNode.parentNode;
-		div.style.height = '100px';
-		div.style.background = "rgb()"
-	}
-	
 </script>
 
 <body> 
@@ -150,6 +142,9 @@ include 'helpers.php';
     <script src="//cdn.optimizely.com/js/141455121.js"></script>
 <!-- /header -->
 <div data-role="header">
+    <a href="logout.php" class="ui-btn-right">
+		Logout
+    </a>
     <h1>Subscriptions</h1>
 </div>
 
@@ -163,7 +158,6 @@ include 'helpers.php';
 
 	<div class="nfl-teams">
 		<div class="team-item-special" id="<?php echo -1; ?>">
-			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
 			<img class="home-team-logo" src = "http://sportsmediamasters.com/smm/wp-content/uploads/2012/04/NFL-logo.gif"/>
 			<p class="team-name">All Teams in the NFL</p>
 		</div>
@@ -173,7 +167,6 @@ include 'helpers.php';
 		{
 		?>
 		<div class="team-item-subscribed" id="<?php echo $team['id']; ?>">
-			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
 			<img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $team['logourl']); ?>"/>
 			<p class="team-name"><?php echo $team['name'] ?> </p>
 		</div>
@@ -185,7 +178,6 @@ include 'helpers.php';
 		{
 		?>
 		<div class="team-item-unsubscribed" id="<?php echo $team['id']; ?>">
-			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
 			<img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $team['logourl']); ?>"/>
 			<p class="team-name"><?php echo $team['name'] ?> </p>
 		</div>
@@ -196,7 +188,6 @@ include 'helpers.php';
 	
 	<div class="nba-teams">
 		<div class="team-item-special" id="<?php echo -2; ?>">
-			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
 			<img class="home-team-logo" src = "http://sportsmediamasters.com/smm/wp-content/uploads/2012/04/NFL-logo.gif"/>
 			<p class="team-name">All Teams in the NBA</p>
 		</div>
@@ -206,7 +197,6 @@ include 'helpers.php';
 		{
 		?>
 		<div class="team-item-subscribed" id="<?php echo $team['id']; ?>">
-			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
 			<img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $team['logourl']); ?>"/>
 			<p class="team-name"><?php echo $team['name'] ?> </p>
 		</div>
@@ -218,7 +208,6 @@ include 'helpers.php';
 		{
 		?>
 		<div class="team-item-unsubscribed" id="<?php echo $team['id']; ?>">
-			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
 			<img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $team['logourl']); ?>"/>
 			<p class="team-name"><?php echo $team['name'] ?> </p>
 		</div>
@@ -229,7 +218,6 @@ include 'helpers.php';
 	  
 	<div class="mlb-teams">
 		<div class="team-item-special" id="<?php echo -3; ?>">
-			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
 			<img class="home-team-logo" src = "http://sportsmediamasters.com/smm/wp-content/uploads/2012/04/NFL-logo.gif"/>
 			<p class="team-name">All Teams in the MLB</p>
 		</div>
@@ -239,7 +227,6 @@ include 'helpers.php';
 		{
 		?>
 		<div class="team-item-subscribed" id="<?php echo $team['id']; ?>">
-			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
 			<img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $team['logourl']); ?>"/>
 			<p class="team-name"><?php echo $team['name'] ?> </p>
 		</div>
@@ -251,7 +238,6 @@ include 'helpers.php';
 		{
 		?>
 		<div class="team-item-unsubscribed" id="<?php echo $team['id']; ?>">
-			<button data-role="button" data-inline="true" data-mini="true" onclick="moreDetail(this);">More</button>
 			<img class="home-team-logo" src = "images/<?php echo str_replace('"', "", $team['logourl']); ?>"/>
 			<p class="team-name"><?php echo $team['name'] ?> </p>
 		</div>
@@ -261,13 +247,11 @@ include 'helpers.php';
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
-		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 		<ul>
 			<li><a href="subscriptions.php" data-ajax="false" id="rss" data-icon="custom">Subscriptions</a></li>
 			<li><a href="index.php" data-ajax="false" id="calendar" data-icon="custom">Calendar</a></li>
 			<li><a href="maps.php" data-ajax="false" id="map" data-icon="custom">Maps</a></li>
-			<li><a href="players.php" data-ajax="false" id="players" data-icon="custom">Players</a></li>
-			<li><a href="register.php" data-ajax="false" id="players" data-icon="custom">Login/Register</a></li>
 		</ul>
 		</div>
 	</div>
