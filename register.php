@@ -79,7 +79,6 @@
 			
 			function newAccount()
 			{
-				alert('here');
 				dataString = $("#registration_form").serialize();
 			        $.ajax({
 			        type: "POST",
@@ -87,7 +86,14 @@
 			        data: dataString,
 			        dataType: "json",
 			        success: function(data) {
-	          			$("#message_ajax").html("<div style='color:black;'>" + data.message + "</div></br>");
+	          			if(data.success == 1)
+	          			{
+	          				window.location.href = 'subscriptions.php';
+							}
+							else
+							{
+		          			$("#message_ajax").html("<div style='color:black;'>" + data.message + "</div></br>");
+							}   			   
 	   			   }
 			   });   
 			}
