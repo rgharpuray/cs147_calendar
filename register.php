@@ -79,6 +79,7 @@
 			
 			function newAccount()
 			{
+				alert('here');
 				dataString = $("#registration_form").serialize();
 			        $.ajax({
 			        type: "POST",
