@@ -96,6 +96,7 @@ include 'helpers.php';
 				data: dataString,
 				cache: false,
 				success: function(data){
+					window.location.reload();
 				}
 			});
 			
@@ -134,14 +135,20 @@ include 'helpers.php';
 	}
 	
 </script>
-
 <body> 
-
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=456324077764144";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div data-role="page" id="filter">
     <script src="//cdn.optimizely.com/js/141455121.js"></script>
 <!-- /header -->
 <div data-role="header">
+	 <div class="fb-like" data-send="false" data-width="450" data-show-faces="false"></div>
     <a href="logout.php" class="ui-btn-right">
 		Logout
     </a>

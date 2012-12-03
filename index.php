@@ -34,8 +34,15 @@ include "helpers.php";
 
 	<?php
 		$games = get_games_for_user_with_id($_SESSION['id']);
-		while($row = mysql_fetch_array($games))
+		
+		if(mysql_num_rows($games) == 0)
 		{
+			echo '</br><a href="subscriptions.php">Click here to subscribe to some teams</a>';
+		}
+		else
+		{
+			while($row = mysql_fetch_array($games))
+			{
 	?>
 
 <div class="accordion">
@@ -66,6 +73,7 @@ include "helpers.php";
 </div>
 	<?php
 		}
+	}
 	?>
 
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
